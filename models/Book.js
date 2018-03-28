@@ -5,7 +5,7 @@ var bookSchema = new mongoose.Schema({
   title: String,
   author: String,
   category: String,
-  stock: Number
+  stock: { type: Number, default: 0}
 });
 
 var Book = mongoose.model('Book', bookSchema);

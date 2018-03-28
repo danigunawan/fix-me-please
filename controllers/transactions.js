@@ -1,7 +1,7 @@
 const Transaction = require('../models/Transaction')
 module.exports = {
   all: function(req, res) {
-    Transaction.find(function (err, transactions) {
+    Transaction.find({}).populate('booklist').exec(function (err, transactions) {
       if (err) {
         res.send({err: err})
       }
