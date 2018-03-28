@@ -90,7 +90,7 @@ describe('Crud Transaction', () => {
     })
   })
   describe('Create Transaction',() => {
-    it('Should Create New Book', function(done) {
+    it('Should Create New Transaction', function(done) {
       chai.request(app)
         .post('/transactions')
         .send({memberid: 'haha', days: 2, price: 1000})
